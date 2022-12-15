@@ -1,0 +1,25 @@
+$linkDark: #323941;
+$linkLight: #afbcca;
+$linkHover: #df3923;
+
+$darkText: #313131;
+
+@mixin block-padding {
+  padding: 20px;
+}
+
+@mixin button-size {
+  height: 36px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@mixin product-status {
+  font-size: 0.7rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 2px;
+  padding: 2px 4px;
+}

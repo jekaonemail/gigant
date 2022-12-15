@@ -1,0 +1,79 @@
+@import "../_variables";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background-color: #101113;
+
+  .header__logotype {
+    @include block-padding;
+
+    width: 300px;
+    font-weight: 800;
+    font-size: 2rem;
+    padding-left: 40px;
+    cursor: default;
+    color: #fff;
+  }
+
+  .header__navbar {
+    @include block-padding;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    > a {
+      text-decoration: none;
+      color: $linkLight;
+
+      &:hover {
+        text-decoration: underline;
+        color: $linkHover;
+      }
+    }
+  }
+
+  .header__activity {
+    @include block-padding;
+
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 40px;
+    gap: 15px;
+
+    button.header__cart-button {
+      @include button-size;
+
+      position: relative;
+
+      &::after {
+        content: attr(count);
+        padding: 3px;
+        background-color: #df3923;
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        font-size: 0.8rem;
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        color: #fff;
+        border: 2px solid #101113;
+      }
+    }
+
+    button.header__sign-in {
+      @include button-size;
+    }
+
+    button.header__saved-products {
+      @include button-size;
+    }
+  }
+}

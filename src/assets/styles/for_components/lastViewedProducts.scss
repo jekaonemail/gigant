@@ -1,0 +1,170 @@
+@import "../variables";
+
+section.last {
+  padding: 20px 40px;
+
+  > h2 {
+    font-size: 1.2rem;
+    color: $darkText;
+    font-weight: 500;
+  }
+
+  .last__products-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 20px;
+    position: relative;
+
+    .last__remove {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      font-size: 0.8rem;
+      background-color: #e2e2e2;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 999;
+
+      &:hover {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+        background-color: #cf4848;
+      }
+
+      &:active {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.9) inset;
+        background-color: #853f3f;
+      }
+    }
+
+    .last__product {
+      width: 11%;
+      position: relative;
+      border-right: 1px solid #ddd;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      .last__item-wrapper {
+        position: relative;
+        height: 100%;
+        padding: 16px;
+        padding-left: 0;
+
+        .last__item {
+          a.last__product-link {
+            display: block;
+            color: $linkDark;
+            text-decoration: none;
+            height: 39px;
+            overflow: hidden;
+            line-height: 1.2rem;
+
+            &:hover {
+              text-decoration: underline;
+              color: $linkHover;
+            }
+          }
+
+          .last__price {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 5px;
+            height: 50px;
+            position: relative;
+            justify-content: flex-end;
+
+            .last__status-wrapper {
+              padding-bottom: 4px;
+
+              .last__isAwait {
+                @include product-status;
+
+                color: #7a7a7a;
+                background-color: #f5f5f5;
+              }
+              .last__isEnding {
+                @include product-status;
+
+                color: #e26009;
+                background-color: #ffeade;
+              }
+              .last__isReady {
+                @include product-status;
+
+                color: #057e34;
+                background-color: #effff5;
+              }
+            }
+
+            .last__old-price {
+              color: #7a7a7a;
+              font-size: 0.9rem;
+              text-decoration: line-through;
+              margin-bottom: 3px;
+
+              &::before {
+                content: "₴";
+                margin-right: 5px;
+              }
+            }
+
+            .last__current-price-black {
+              font-size: 1.3rem;
+              font-weight: 500;
+              color: $linkDark;
+
+              &::before {
+                content: "₴";
+                margin-right: 5px;
+              }
+            }
+
+            .last__current-price {
+              font-size: 1.3rem;
+              font-weight: 500;
+              color: $linkHover;
+
+              &::before {
+                content: "₴";
+                margin-right: 5px;
+              }
+            }
+          }
+
+          .last__image-wrapper {
+            position: relative;
+            display: block;
+            height: 170px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover {
+              opacity: 0.9;
+            }
+
+            > img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              max-height: 140px;
+              max-width: 100%;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+  }
+}

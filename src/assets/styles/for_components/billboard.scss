@@ -1,0 +1,40 @@
+@import "../variables";
+
+section.billboard {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+
+  .billboard__categories {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    width: 300px;
+    gap: 12px;
+
+    > li {
+      > a {
+        text-decoration: none;
+        color: $linkDark;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+
+        .billboard__category-icon {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          border-radius: 2px;
+          margin-right: 10px;
+          background-color: rgb(233, 233, 233);
+        }
+
+        &:hover {
+          text-decoration: underline;
+          color: $linkHover;
+        }
+      }
+    }
+  }
+}
