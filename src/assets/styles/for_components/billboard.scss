@@ -5,34 +5,140 @@ section.billboard {
   align-items: stretch;
   gap: 30px;
 
-  .billboard__categories {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 40px;
-    width: 300px;
-    gap: 12px;
+  .billboard__left {
+    .billboard__support {
+      margin: 20px 0 0 40px;
+      padding: 10px 13px 10px 13px;
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      background-color: #f9f9f9;
+      cursor: pointer;
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Chrome/Safari/Opera */
+      -khtml-user-select: none; /* Konqueror */
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none; /* Non-prefixed version, currently
+                                    not supported by any browser */
 
-    > li {
-      > a {
-        text-decoration: none;
-        color: $linkDark;
+      &:hover {
+        background-color: #f4f4f4;
+      }
+
+      &:active {
+        background-color: #ebebeb;
+      }
+
+      > h5 {
+        font-size: 1.1rem;
+        padding: 10px;
+        padding-bottom: 5px;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        gap: 5px;
+        justify-content: space-between;
 
-        .billboard__category-icon {
-          display: inline-block;
-          width: 20px;
-          height: 20px;
-          border-radius: 2px;
-          margin-right: 10px;
-          background-color: rgb(233, 233, 233);
+        > strong {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 15px;
+        }
+      }
+
+      .billboard__support-content {
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+
+        > p {
+          font-size: 0.9rem;
+          color: #8f8f8f;
+          background-color: #f9f9f9;
+          padding: 10px;
+          padding-top: 3px;
         }
 
-        &:hover {
-          text-decoration: underline;
-          color: $linkHover;
+        > h4 {
+          color: #424242;
+          font-size: 1rem;
+          margin-bottom: 5px;
+          margin-top: 10px;
+          padding-left: 10px;
+          margin-bottom: 15px;
+        }
+
+        .billboard__phones-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-left: 10px;
+
+          > ul {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            > li {
+              font-size: 0.8rem;
+              color: #000;
+            }
+          }
+
+          .billboard__callback-button {
+            height: 36px;
+            border: none;
+            border-radius: 3px;
+            background-color: #2b313d;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 0 10px;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #353c4b;
+            }
+
+            &:active {
+              background-color: #222630;
+            }
+          }
+        }
+      }
+    }
+
+    .billboard__categories {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 40px;
+      width: 300px;
+      gap: 12px;
+
+      > li {
+        > a {
+          text-decoration: none;
+          color: $linkDark;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 5px;
+
+          .billboard__category-icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 2px;
+            margin-right: 10px;
+            background-color: rgb(233, 233, 233);
+          }
+
+          &:hover {
+            text-decoration: underline;
+            color: $linkHover;
+          }
         }
       }
     }
