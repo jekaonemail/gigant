@@ -1,0 +1,130 @@
+@import "../variables";
+
+.limit {
+  padding: 30px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .limit__cards-wrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 20px;
+
+    .limit__card {
+      position: relative;
+      background-color: #fff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      cursor: pointer;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+      .limit__discount {
+        position: absolute;
+        border: 1px solid red;
+        z-index: 1;
+        background-color: $linkHover;
+        color: #fff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -10px;
+        left: -10px;
+        font-size: 1rem;
+        font-weight: 700;
+        border: 20px solid #fff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+
+      &:hover img {
+        opacity: 0.9;
+      }
+
+      .limit__card-image-wrapper {
+        width: 100%;
+        height: 100%;
+        height: 320px;
+        overflow: hidden;
+        position: relative;
+
+        > img {
+          //   position: absolute;
+          //   max-height: 180px;
+          //   max-width: 100%;
+          //   top: 50%;
+          //   left: 50%;
+          //   vertical-align: middle;
+          //   transform: translate(-50%, -50%);
+          border-radius: 20px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      > h2 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: $darkText;
+        margin-top: 20px;
+      }
+
+      > p {
+        font-size: 0.9rem;
+        color: #7a7a7a;
+        margin-top: 10px;
+      }
+
+      .limit__card-ending {
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        padding: 5px 0;
+        color: #111;
+        gap: 10px;
+        margin-top: 20px;
+
+        > strong {
+          color: $linkHover;
+          font-weight: 700;
+          font-size: 0.75rem;
+          padding: 1px 4px 2px 4px;
+          background-color: rgb(255, 254, 219);
+        }
+      }
+
+      .limit__card-button {
+        border: none;
+        border-radius: 5px;
+        background-color: #66898f;
+        color: #fff;
+        text-align: center;
+        height: 40px;
+        padding: 0 15px;
+        margin-top: 10px;
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        border-bottom: 1px solid #516a6e;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+
+        &:hover {
+          background-color: #6e949b;
+        }
+
+        &:active {
+          background-color: #5c797e;
+        }
+      }
+    }
+  }
+}

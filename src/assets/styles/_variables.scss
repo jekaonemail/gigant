@@ -32,3 +32,9 @@ $darkText: #313131;
   border-radius: 2px;
   padding: 2px 4px;
 }
+
+@mixin section-title {
+  font-size: 1.2rem;
+  color: #313131;
+  font-weight: 500;
+}

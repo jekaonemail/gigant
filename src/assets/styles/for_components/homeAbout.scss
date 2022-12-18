@@ -1,0 +1,27 @@
+@import "../variables";
+
+@mixin element-padding {
+  padding: 0 30px;
+}
+
+.homeAbout {
+  padding: 30px 40px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h1 {
+    @include element-padding;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  p {
+    @include element-padding;
+    color: #424242;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+}

@@ -1,0 +1,131 @@
+@import "../variables";
+
+.subscribe {
+  background-color: rgb(244, 255, 252);
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .subscribe__wrapper {
+    background-color: #fff;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+
+    .subscribe__content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      > h4 {
+        text-transform: uppercase;
+        color: #424242;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      > h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #000;
+      }
+
+      > p {
+        font-size: 1rem;
+        color: #7a7a7a;
+        line-height: 1.6rem;
+        margin-top: 20px;
+      }
+
+      .subscribe__options {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+
+        > label {
+          margin-right: 50px;
+          font-size: 0.9rem;
+          padding-left: 10px;
+          font-weight: 600;
+        }
+      }
+
+      .subscribe__activity {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        .subscribe__button {
+          height: 42px;
+          background-color: rgb(46, 44, 61);
+          border: 1px solid;
+          border-radius: 3px;
+          border-color: rgb(36, 35, 48) rgb(30, 29, 39) rgb(19, 18, 26);
+          cursor: pointer;
+          color: #fff;
+          font-size: 0.9rem;
+          font-weight: 500;
+          padding: 0 20px;
+
+          &:hover {
+            background-color: rgb(56, 54, 75);
+          }
+
+          &:active {
+            background-color: rgb(33, 32, 44);
+          }
+        }
+
+        input.subscribe__email {
+          height: 42px;
+          padding: 0 20px;
+          border: none;
+          background-color: #ffffe5;
+          border-radius: 3px;
+          outline: none;
+          flex: 1;
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+
+          &:hover {
+            background-color: #ffffdd;
+          }
+
+          &:focus {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+          }
+        }
+      }
+
+      > h5 {
+        color: #7a7a7a;
+        font-size: 0.8rem;
+
+        > a {
+          color: $darkText;
+
+          &:hover {
+            color: $linkHover;
+          }
+        }
+      }
+    }
+
+    .subscribe__image-wrapper {
+      flex: 1;
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+    }
+  }
+}

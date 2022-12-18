@@ -4,9 +4,27 @@ section.last {
   padding: 20px 40px;
 
   > h2 {
-    font-size: 1.2rem;
-    color: $darkText;
-    font-weight: 500;
+    @include section-title;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    > hr {
+      display: block;
+      height: 1px;
+      flex: 1;
+      border: none;
+      background-color: #f5f5f5;
+    }
+
+    a.last__header-link {
+      font-size: 1rem;
+      color: $darkText;
+
+      &:hover {
+        color: $linkHover;
+      }
+    }
   }
 
   .last__products-wrapper {
@@ -47,7 +65,7 @@ section.last {
     .last__product {
       width: 11%;
       position: relative;
-      border-right: 1px solid #ddd;
+      border-right: 1px solid #f1f1f1;
       padding-right: 10px;
 
       &:last-child {
