@@ -4,6 +4,7 @@ import Slider from "./Slider";
 import CallbackIcon from "./icons/CallbackIcon";
 import ArrowDown from "./icons/ArrowDown";
 import Support from "./icons/Support";
+import { useState } from "react";
 
 const Billboard = () => {
   const categories = [
@@ -68,10 +69,23 @@ const Billboard = () => {
     // },
   ];
 
+  const [support, setSupport] = useState(false);
+
+  const handleSupportMenu = () => {
+    support ? setSupport(false) : setSupport(true);
+  };
+
   return (
     <section className="billboard">
       <div className="billboard__left">
-        <div className="billboard__support">
+        <div
+          className={
+            support
+              ? "billboard__support billboard__support-active"
+              : "billboard__support"
+          }
+          onClick={handleSupportMenu}
+        >
           <h5>
             <strong>
               <Support />
@@ -80,7 +94,16 @@ const Billboard = () => {
             <ArrowDown />
           </h5>
 
-          <div className="billboard__support-content">
+          <div
+            className={
+              support
+                ? "billboard__support-content"
+                : "billboard__support-content-hidden"
+            }
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          >
             <p>Виникли питання? Будемо раді на них відповісти!</p>
 
             <h4>Прийом дзвінків (Пн-Пт) з 9:00-18:00</h4>

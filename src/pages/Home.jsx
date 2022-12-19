@@ -106,6 +106,104 @@ const Home = () => {
     },
   ];
 
+  const bestsellers = [
+    {
+      id: 1,
+      image:
+        "https://content.rozetka.com.ua/goods/images/preview/162345736.jpg",
+      title: "Упаковка пюре гомогенізованого",
+      oldPrice: 219,
+      currentPrice: 132,
+      isAwait: false,
+      isEnding: false,
+      isReady: false,
+    },
+
+    {
+      id: 2,
+      image:
+        "https://content.rozetka.com.ua/goods/images/preview/169540018.jpg",
+      title: "Kingston NV1 500GB NVMe M.2 2280 PCIe 3.0",
+      oldPrice: 1_869,
+      currentPrice: 1_649,
+      isAwait: false,
+      isEnding: false,
+      isReady: false,
+    },
+
+    {
+      id: 3,
+      image:
+        "https://content2.rozetka.com.ua/goods/images/preview/295164032.jpg",
+      title: "Портативна газова плитка Alpen Camping",
+      oldPrice: 2599,
+      currentPrice: 2399,
+      isAwait: false,
+      isEnding: false,
+      isReady: false,
+    },
+
+    {
+      id: 4,
+      image:
+        "https://content1.rozetka.com.ua/goods/images/preview/22973157.jpg",
+      title: "УМБ Xiaomi Mi Power Bank 3 20000 mAh USB-",
+      oldPrice: 2199,
+      currentPrice: 1999,
+      isAwait: false,
+      isEnding: false,
+      isReady: false,
+    },
+
+    {
+      id: 5,
+      image:
+        "https://content1.rozetka.com.ua/goods/images/preview/222451636.jpg",
+      title: "Ігрова приставка PS5 PlayStation 5",
+      oldPrice: null,
+      currentPrice: 25_999,
+      isAwait: true,
+      isEnding: false,
+      isReady: false,
+    },
+
+    {
+      id: 6,
+      image:
+        "https://content.rozetka.com.ua/goods/images/preview/244419751.jpg",
+      title: "Кулер RZTK PcCooler GI-U4 SRGB",
+      oldPrice: 699,
+      currentPrice: 599,
+      isAwait: false,
+      isEnding: false,
+      isReady: false,
+    },
+
+    {
+      id: 7,
+      image:
+        "https://content2.rozetka.com.ua/goods/images/preview/188529538.jpg",
+      title: "Навушники Defunc True Music TWS Black",
+      oldPrice: 1199,
+      currentPrice: 869,
+      isAwait: false,
+      isEnding: false,
+      isReady: false,
+    },
+
+    {
+      id: 8,
+      image:
+        "https://content1.rozetka.com.ua/goods/images/preview/290285380.jpg",
+      title: "Автоматична помпа для води з датчиком якості",
+      oldPrice: null,
+      currentPrice: 920,
+      isAwait: false,
+      isEnding: false,
+      isReady: true,
+    },
+  ];
+
   return (
     <div className="container">
       <Header />
@@ -118,7 +216,7 @@ const Home = () => {
       <LimitPropose />
 
       <ProductLine
-        products={lastViewedProducts}
+        products={bestsellers}
         removable={false}
         title="Бестселлери магазину"
         link={{ href: "/best", text: "Топ 100 бестселлерів" }}

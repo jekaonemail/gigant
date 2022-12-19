@@ -6,7 +6,26 @@ section.billboard {
   gap: 30px;
 
   .billboard__left {
+    width: 410px;
+
+    .billboard__support-active {
+      background-color: #222630 !important;
+      color: #fff;
+
+      > h5 {
+        > svg {
+          transform: rotate(540deg);
+          transition: all 0.5s ease;
+
+          > path {
+            stroke: #fff;
+          }
+        }
+      }
+    }
+
     .billboard__support {
+      position: relative;
       margin: 20px 0 0 40px;
       padding: 10px 13px 10px 13px;
       cursor: default;
@@ -46,33 +65,46 @@ section.billboard {
         }
       }
 
-      .billboard__support-content {
+      .billboard__support-content-hidden {
         opacity: 0;
         visibility: hidden;
         height: 0;
+      }
+
+      .billboard__support-content {
+        position: absolute;
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+        background-color: #f1f1f1;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        bottom: -130px;
+        left: 0;
+        width: 100%;
+        cursor: default;
 
         > p {
           font-size: 0.9rem;
           color: #8f8f8f;
-          background-color: #f9f9f9;
-          padding: 10px;
-          padding-top: 3px;
+          padding: 0 20px;
+          padding-top: 20px;
         }
 
         > h4 {
+          padding: 0 20px;
           color: #424242;
           font-size: 1rem;
           margin-bottom: 5px;
           margin-top: 10px;
-          padding-left: 10px;
           margin-bottom: 15px;
         }
 
         .billboard__phones-wrapper {
+          padding: 0 20px;
+          padding-bottom: 20px;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding-left: 10px;
 
           > ul {
             display: flex;
