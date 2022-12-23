@@ -132,3 +132,29 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+.modal__wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+
+.closeModal {
+  position: absolute;
+  right: 50px;
+  top: 40px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.closeModal:hover {
+  background-color: #f1f1f1;
+}

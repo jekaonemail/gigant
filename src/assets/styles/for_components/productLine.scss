@@ -49,7 +49,7 @@ section.last {
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      z-index: 999;
+      z-index: 50;
 
       &:hover {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
@@ -170,8 +170,13 @@ section.last {
             cursor: pointer;
             text-decoration: none;
 
-            &:hover {
-              opacity: 0.9;
+            &:hover img {
+              opacity: 0.4;
+            }
+
+            &:hover .last__itemDetails {
+              opacity: 1;
+              visibility: visible;
             }
 
             > img {
@@ -182,6 +187,25 @@ section.last {
               max-height: 140px;
               max-width: 100%;
               vertical-align: middle;
+            }
+
+            .last__itemDetails {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 40px;
+              height: 40px;
+              background-color: #fff;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              overflow: hidden;
+              opacity: 0;
+              visibility: hidden;
+              transition: all 0.2s ease;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             }
           }
         }

@@ -1,0 +1,41 @@
+@import "../variables";
+
+.orderStatus__title {
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+}
+
+.header__status-check-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  > input {
+    flex: 1;
+    height: 40px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    background-color: rgb(242, 239, 255);
+    outline: none;
+  }
+
+  > button {
+    height: 40px;
+    padding: 0 15px;
+    border: none;
+    background-color: #df3923;
+    color: #fff;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: #f0442d;
+  }
+
+  &:active {
+    background-color: #c7331f;
+  }
+}

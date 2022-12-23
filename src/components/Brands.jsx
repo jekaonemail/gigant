@@ -129,7 +129,7 @@ const Brands = () => {
         >
           {brandList &&
             brandList.map((brand) => (
-              <SwiperSlide className="brands__slide">
+              <SwiperSlide key={brand.id} className="brands__slide">
                 <Link to={brand.link}>
                   <div className="brands__image-wrapper">
                     <img src={brand.image} alt={brand.name} />

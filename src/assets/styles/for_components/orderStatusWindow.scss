@@ -1,0 +1,80 @@
+@import "../variables";
+
+.order-status-window {
+  background-color: #fff;
+  position: absolute;
+  left: 70px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  top: 70px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  border-radius: 5px;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 10px;
+    background-image: linear-gradient(to bottom right, transparent 50%, white 0),
+      linear-gradient(to top right, white 50%, transparent 0);
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-position: left, right;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  > h3 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #2b2b2b;
+    margin-bottom: 20px;
+  }
+
+  .order-status-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    @mixin form-elements {
+      padding: 0 15px;
+      height: 40px;
+      border: none;
+    }
+
+    > input {
+      @include form-elements;
+
+      background-color: #f0f3ff;
+      flex: 1;
+      outline: none;
+      border-radius: 3px 0 0 3px;
+    }
+
+    > button {
+      @include form-elements;
+
+      border-radius: 0 3px 3px 0;
+      background-color: #df3923;
+      color: #fff;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f0442d;
+      }
+
+      &:active {
+        background-color: #c7331f;
+      }
+    }
+  }
+
+  > span {
+    font-size: 0.8rem;
+    color: #505050;
+  }
+}

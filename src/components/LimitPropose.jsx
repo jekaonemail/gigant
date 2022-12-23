@@ -1,5 +1,5 @@
 import "../assets/styles/for_components/limitPropose.scss";
-import Clock from "./icons/Clock";
+import { Clock } from "./icons/icons";
 
 const LimitPropose = () => {
   const cards = [
@@ -49,7 +49,7 @@ const LimitPropose = () => {
       <ul className="limit__cards-wrapper">
         {cards &&
           cards.map((card) => (
-            <li className="limit__card">
+            <li key={card.image} className="limit__card">
               <span className="limit__discount">-{card.discount}%</span>
 
               <div className="limit__card-image-wrapper">

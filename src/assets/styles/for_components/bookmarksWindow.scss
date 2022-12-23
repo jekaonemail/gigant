@@ -1,0 +1,154 @@
+@import "../variables";
+
+.bookmarks__content {
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  > h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .bookmarks__list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    > li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+      gap: 20px;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .bookmarks__image-wrapper {
+        position: relative;
+        width: 180px;
+        height: 150px;
+        overflow: hidden;
+
+        > img {
+          position: absolute;
+          max-width: 100%;
+          height: 130px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          vertical-align: middle;
+        }
+      }
+
+      .bookmarks__product-info {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        > h2 {
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+
+        .bookmarks__activity {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 20px;
+
+          button.bookmarks__remove {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            background-color: #252525;
+            border-radius: 3px;
+            height: 40px;
+            padding: 0 15px;
+            gap: 10px;
+            color: #fff;
+
+            &:hover {
+              background-color: #363636;
+            }
+
+            &:active {
+              background-color: #1b1b1b;
+            }
+          }
+
+          button.bookmarks__addToCart {
+            background-color: #df3923;
+            border: none;
+            height: 40px;
+            padding: 0 15px;
+            color: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            &:hover {
+              background-color: #f0442d;
+            }
+
+            &:active {
+              background-color: #c7331f;
+            }
+          }
+        }
+
+        .bookmarks__product-price-normal {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          font-size: 1.5rem;
+          font-weight: 500;
+          color: $darkText;
+
+          &::before {
+            content: "₴";
+            padding-right: 5px;
+          }
+        }
+
+        .bookmarks__product-price {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          font-size: 1.5rem;
+          font-weight: 500;
+          color: orangered;
+
+          &::before {
+            content: "₴";
+            padding-right: 5px;
+          }
+
+          > span {
+            font-size: 0.9rem;
+            color: #7a7a7a;
+            text-decoration: line-through;
+            margin-left: 20px;
+            padding-top: 4px;
+
+            &::before {
+              content: "₴";
+              padding-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

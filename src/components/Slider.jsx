@@ -10,7 +10,7 @@ const Slider = () => {
     {
       id: 1,
       image:
-        "https://content.rozetka.com.ua/banner_main/image_ua/original/299285145.jpg",
+        "https://content2.rozetka.com.ua/banner_main/image_ua/original/301770670.jpg",
       title: "Автономне живлення у точках видачі Faststore",
       description: "забирайте замовлення у зручний час",
     },

@@ -1,0 +1,94 @@
+@import "../variables";
+@mixin elements-padding {
+  padding: 20px;
+}
+
+.signIn__content {
+  @include elements-padding;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  > h3 {
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  > p {
+    font-size: 0.9rem;
+    color: #7a7a7a;
+    padding-top: 0;
+  }
+
+  .signInForm {
+    @include elements-padding;
+
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: #f9f9f9;
+
+    > input {
+      flex: 1;
+      height: 40px;
+      padding: 0 15px;
+      border-radius: 3px;
+      background-color: #effff3;
+      outline: none;
+      border: none;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+
+      &:hover {
+        background-color: #e9ffef;
+      }
+
+      &:focus {
+        background-color: #dbe6dd;
+      }
+    }
+
+    > button {
+      padding: 0 15px;
+      height: 40px;
+      border: none;
+      border-radius: 3px;
+      background-color: #df3923;
+      color: #fff;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f0442d;
+      }
+
+      &:active {
+        background-color: #c7331f;
+      }
+    }
+  }
+
+  > span {
+    font-size: 0.9rem;
+    color: #525252;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+
+    > button {
+      background-color: transparent;
+      border: none;
+      color: $linkDark;
+      cursor: pointer;
+      padding-top: 4px;
+
+      &:hover {
+        text-decoration: underline;
+        color: #df3923;
+      }
+    }
+  }
+}

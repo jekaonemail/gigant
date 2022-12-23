@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../assets/styles/for_components/productLine.scss";
+import { Eye } from "./icons/icons";
 
 const ProductLine = ({ removable, title, products, link }) => {
   return (
@@ -55,6 +56,10 @@ const ProductLine = ({ removable, title, products, link }) => {
                       src={product.image}
                       alt={product.title}
                     />
+
+                    <span className="last__itemDetails">
+                      <Eye />
+                    </span>
                   </Link>
 
                   <Link to="/" className="last__product-link">

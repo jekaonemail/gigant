@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import "../assets/styles/for_components/footer.scss";
-import Logotype from "./icons/Logotype";
 
-import Instagram from "./icons/Instagram";
-import Telegram from "./icons/Telegram";
-import Facebook from "./icons/Facebook";
-import Tiktok from "./icons/Tiktok";
-import Email from "./icons/Email";
-import Phone from "./icons/Phone";
+import {
+  Logotype,
+  Instagram,
+  Telegram,
+  Facebook,
+  Tiktok,
+  Email,
+  Phone,
+} from "./icons/icons";
 
 const Footer = () => {
   return (

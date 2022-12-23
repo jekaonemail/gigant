@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import "../assets/styles/for_components/billboard.scss";
 import Slider from "./Slider";
-import CallbackIcon from "./icons/CallbackIcon";
-import ArrowDown from "./icons/ArrowDown";
-import Support from "./icons/Support";
+
+import { CallbackIcon, ArrowDown, Support } from "./icons/icons";
+
 import { useState } from "react";
 
 const Billboard = () => {
